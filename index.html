@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/images/tarotfavicon.png" />
+    <title>Psychic Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Akronim|Fontdiner+Swanky|Nosifer|Sancreek|Trochut&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <H1>The Psychic Game </H1>
+        <img class="psychic" src="assets/images/psychic.gif">
+        <p> Guess what letter I'm thinking of...</p>
+
+        <p>Wins:<span id="wins"></span></p>
+        <p>Losses:<span id="losses"></span></p>
+        <p>Guesses Left:<span id="guessleft"></span></p>
+        <p>Your guesses so far: <span id="yourguess"></span></p>
+
+        <!-- <script src="javascript/Game.js"></script> -->
+        <!-- JavaScript starts here -->
+        <script type="text/javascript">
+            let answer;
+            // computer picks a random letter
+            let comGuess = function() {
+                let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+                answer = letters[Math.floor(Math.random() * letters.length)];
+                console.log(answer);
+            };
+            // logs the computer picked letter
+            comGuess();
+            let win = 0;
+            document.getElementById("wins").innerText = win;
+            let guessLeft = 10;
+            document.getElementById("guessleft").innerText = guessLeft;
+            let loss = 0;
+            document.getElementById("losses").innerText = loss;
+
+            //when the key is pressed
+            addEventListener("keypress", function(event) {
+                let key = String.fromCharCode(event.charCode);
+                console.log(key);
+                document.getElementById("yourguess").innerText += key;
+
+                //the += replaces document.getElementById("yourguess").innerText = document.getElementById("yourguess").innerText + key
+
+                if (answer === key) {
+                    document.getElementById("wins").innerText = ++win;
+                    reset();
+                } else {
+                    document.getElementById("guessleft").innerText = --guessLeft;
+                    if (guessLeft < 1) {
+                        document.getElementById("losses").innerText = ++loss;
+                        reset();
+                    }
+                }
+
+            });
+
+            function reset() {
+                guessLeft = 10;
+                document.getElementById("guessleft").innerText = guessLeft;
+                document.getElementById("yourguess").innerText = "";
+                comGuess();
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

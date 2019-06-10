@@ -1,0 +1,29 @@
+h1 {
+    font-family: Trochut, Helvetica, sans-serif;
+    font-size: 50px;
+    /* color: #464646; */
+    color: #6f7172;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: #d1d0ca;
+    border-radius: 25px;
+    border: 1px solid #b8b6b1;
+    padding: 20px;
+    font-family: Trochut, Helvetica, sans-serif;
+    color: #6f7172;
+    font-size: 25px;
+}
+
+body {
+    background-color: #f5f4f3;
+    /* background: url("../../assets/images/starrysky2.png"); */
+    /* background: url("../../assets/images/stargif.gif"); */
+}
+
+.psychic {
+    border-radius: 10%;
+}
