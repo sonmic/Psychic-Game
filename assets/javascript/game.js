@@ -1,3 +1,11 @@
+// blink text 
+function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
+
+
 let answer;
 // computer picks a random letter
 let comGuess = function() {
@@ -14,19 +22,12 @@ document.getElementById("guessleft").innerText = guessLeft;
 let loss = 0;
 document.getElementById("losses").innerText = loss;
 
-
-// blink text 
-function blink_text() {
-    $('.blink').fadeOut(500);
-    $('.blink').fadeIn(500);
-}
-setInterval(blink_text, 1000);
-
 //when the key is pressed
 addEventListener("keypress", function(event) {
     let key = String.fromCharCode(event.charCode);
     console.log(key);
     document.getElementById("yourguess").innerText += key;
+    $('.blink').remove();
 
     //the += replaces document.getElementById("yourguess").innerText = document.getElementById("yourguess").innerText + key
 
