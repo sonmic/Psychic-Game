@@ -20,10 +20,12 @@ h1 {
 
 body {
     background-color: #f5f4f3;
-    /* background: url("../../assets/images/starrysky2.png"); */
-    /* background: url("../../assets/images/stargif.gif"); */
 }
 
 .psychic {
     border-radius: 10%;
+}
+
+.press {
+    color: #9b9b94b6;
 }
