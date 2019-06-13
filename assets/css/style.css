@@ -3,27 +3,33 @@ h1 {
     font-size: 50px;
     /* color: #464646; */
     color: #6f7172;
+    padding: 10px;
 }
 
 .container {
     width: 500px;
-    margin: 0 auto;
-    padding-top: 100px;
+    margin: auto;
     background-color: #d1d0ca;
     border-radius: 25px;
     border: 1px solid #b8b6b1;
-    padding: 20px;
+    padding: 18px;
     font-family: Trochut, Helvetica, sans-serif;
     color: #6f7172;
     font-size: 25px;
 }
 
 body {
+    padding-top: 50px;
     background-color: #f5f4f3;
 }
 
 .psychic {
     border-radius: 10%;
+}
+
+p {
+    padding: 10px 0;
+    font-size: 25px;
 }
 
 .press {
