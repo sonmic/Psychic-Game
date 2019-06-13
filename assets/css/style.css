@@ -3,7 +3,6 @@ h1 {
     font-size: 50px;
     /* color: #464646; */
     color: #6f7172;
-    padding: 10px;
 }
 
 .container {
@@ -16,22 +15,36 @@ h1 {
     font-family: Trochut, Helvetica, sans-serif;
     color: #6f7172;
     font-size: 25px;
+    line-height: 1.6;
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 1%;
     background-color: #f5f4f3;
+    display: flex;
 }
 
 .psychic {
     border-radius: 10%;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
-p {
-    padding: 10px 0;
-    font-size: 25px;
-}
-
-.press {
+.blink {
     color: #9b9b94b6;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding-top: 0px;
+    }
+    h1 {
+        font-family: Trochut, Helvetica, sans-serif;
+        font-size: 40px;
+        padding: 10px;
+    }
+    p {
+        padding: 10px 0;
+        font-size: 20px;
+    }
 }

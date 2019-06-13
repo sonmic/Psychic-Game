@@ -13,17 +13,19 @@
     <!-- Linking Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Akronim|Fontdiner+Swanky|Nosifer|Sancreek|Trochut&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Linking jQuery -->
+    <script src="jquery-3.4.0.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <H1>The Psychic Game </H1>
         <img class="psychic" src="assets/images/psychic.gif">
-        <p> Guess what letter I'm thinking of...<span class="press">press a letter key!</span></p>
-
-        <p>Wins:<span id="wins"></span></p>
-        <p>Losses:<span id="losses"></span></p>
-        <p>Guesses Left:<span id="guessleft"></span></p>
+        <span> Guess what letter I'm thinking of...</span>
+        <span class="blink">press a letter key!</span>
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses: <span id="losses"></span></p>
+        <p>Guesses Left: <span id="guessleft"></span></p>
         <p>Your guesses so far: <span id="yourguess"></span></p>
 
         <!-- Linking JavaScript file -->
